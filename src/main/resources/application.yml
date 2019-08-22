@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+spring:
+  resources:
+    static-locations: classpath:/static,classpath:/pages/,classpath:/component/
+
+  thymeleaf:
+    prefix: classpath:/templates
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    cache: false
+
+  datasource:
+    url: jdbc:oracle:thin:@10.201.0.5:1521:devdb
+    username: AIQRY
+    password: 34g2R9Q#
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+
