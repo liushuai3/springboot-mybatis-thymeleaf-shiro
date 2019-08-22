@@ -20,39 +20,39 @@ create table AIQRY.SEC_USER
 );
 -- Add comments to the table 
 comment on table AIQRY.SEC_USER
-  is 'ÓÃ»§ĞÅÏ¢±í';
--- Add comments to the columns 
+  is 'ç”¨æˆ·ä¿¡æ¯è¡¨';
+-- Add comments to the columns
 comment on column AIQRY.SEC_USER.USER_ID
-  is 'Î¨Ò»±êÊ¶';
+  is 'å”¯ä¸€æ ‡è¯†';
 comment on column AIQRY.SEC_USER.USER_CODE
-  is 'ÓÃ»§Ãû';
+  is 'ç”¨æˆ·å';
 comment on column AIQRY.SEC_USER.PLAINTEXT_PASSWORD
-  is 'Ã÷ÎÄÃÜÂë';
+  is 'æ˜æ–‡å¯†ç ';
 comment on column AIQRY.SEC_USER.PASSWORD
-  is 'ÃÜÎÄÃÜÂë';
+  is 'å¯†æ–‡å¯†ç ';
 comment on column AIQRY.SEC_USER.USERNAME
-  is 'ÓÃ»§ÕæÊµĞÕÃû';
+  is 'ç”¨æˆ·çœŸå®å§“å';
 comment on column AIQRY.SEC_USER.PHONE
-  is 'ÊÖ»úºÅÂë';
+  is 'æ‰‹æœºå·ç ';
 comment on column AIQRY.SEC_USER.EMAIL
   is 'EMAIL';
 comment on column AIQRY.SEC_USER.DESCRIPTION
-  is 'ÃèÊö';
+  is 'æè¿°';
 comment on column AIQRY.SEC_USER.IS_ADMIN
-  is 'ÊÇ·ñÊÇ³¬¼¶¹ÜÀíÔ±(1£ºÊÇ³¬¼¶¹ÜÀíÔ±
-  0£º²»ÊÇ³¬¼¶¹ÜÀíÔ±)';
+  is 'æ˜¯å¦æ˜¯è¶…çº§ç®¡ç†å‘˜(1ï¼šæ˜¯è¶…çº§ç®¡ç†å‘˜
+  0ï¼šä¸æ˜¯è¶…çº§ç®¡ç†å‘˜)';
 comment on column AIQRY.SEC_USER.STATUS
-  is '0: Ê§Ğ§
-  1: Õı³£';
+  is '0: å¤±æ•ˆ
+  1: æ­£å¸¸';
 comment on column AIQRY.SEC_USER.CREATE_DATE
-  is '´´½¨Ê±¼ä';
+  is 'åˆ›å»ºæ—¶é—´';
 comment on column AIQRY.SEC_USER.CREATOR_ID
-  is '´´½¨ÈËID';
+  is 'åˆ›å»ºäººID';
 comment on column AIQRY.SEC_USER.CREATOR_NAME
-  is '´´½¨ÈËÃû×Ö';
+  is 'åˆ›å»ºäººåå­—';
 comment on column AIQRY.SEC_USER.MODIFIER_ID
-  is 'ĞŞ¸ÄÈËÔ±';
+  is 'ä¿®æ”¹äººå‘˜';
 comment on column AIQRY.SEC_USER.MODIFIER_NAME
-  is 'ĞŞ¸ÄÈËÃû×Ö';
+  is 'ä¿®æ”¹äººåå­—';
 comment on column AIQRY.SEC_USER.MODIFIER_DATE
-  is 'ĞŞ¸ÄÈÕÆÚ';
+  is 'ä¿®æ”¹æ—¥æœŸ';

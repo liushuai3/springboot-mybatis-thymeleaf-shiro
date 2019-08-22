@@ -10,19 +10,19 @@ create table AIQRY.SEC_AUTHORIZE
 );
 -- Add comments to the table 
 comment on table AIQRY.SEC_AUTHORIZE
-  is '½ÇÉ«ÊÚÈ¨±í';
--- Add comments to the columns 
+  is 'è§’è‰²æˆæƒè¡¨';
+-- Add comments to the columns
 comment on column AIQRY.SEC_AUTHORIZE.AUTHORIZE_ID
   is 'AUTHORIZE_ID';
 comment on column AIQRY.SEC_AUTHORIZE.USER_ID
-  is 'ÓÃ»§id';
+  is 'ç”¨æˆ·id';
 comment on column AIQRY.SEC_AUTHORIZE.ROLE_CODE
-  is '½ÇÉ«CODE';
+  is 'è§’è‰²CODE';
 comment on column AIQRY.SEC_AUTHORIZE.MODIFIER_ID
-  is '×îºóĞŞ¸ÄÈËÔ±';
+  is 'æœ€åä¿®æ”¹äººå‘˜';
 comment on column AIQRY.SEC_AUTHORIZE.MODIFIER_NAME
-  is '×îºóĞŞ¸ÄÈËÃû×Ö';
+  is 'æœ€åä¿®æ”¹äººåå­—';
 comment on column AIQRY.SEC_AUTHORIZE.MODIFIER_DATE
-  is '×îºóĞŞ¸ÄÈÕÆÚ';
+  is 'æœ€åä¿®æ”¹æ—¥æœŸ';
 
 

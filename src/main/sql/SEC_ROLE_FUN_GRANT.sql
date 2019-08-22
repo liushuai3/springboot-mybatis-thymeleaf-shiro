@@ -10,15 +10,15 @@ create table AIQRY.SEC_ROLE_FUN_GRANT
 );
 -- Add comments to the table 
 comment on table AIQRY.SEC_ROLE_FUN_GRANT
-  is '½ÇÉ«Óë¿Ø¼şÊµÌå°ó¶¨±í';
--- Add comments to the columns 
+  is 'è§’è‰²ä¸æ§ä»¶å®ä½“ç»‘å®šè¡¨';
+-- Add comments to the columns
 comment on column AIQRY.SEC_ROLE_FUN_GRANT.FUNC_ID
-  is '¹¦ÄÜid';
+  is 'åŠŸèƒ½id';
 comment on column AIQRY.SEC_ROLE_FUN_GRANT.MODIFIER_ID
-  is 'ĞŞ¸ÄÈËÔ±';
+  is 'ä¿®æ”¹äººå‘˜';
 comment on column AIQRY.SEC_ROLE_FUN_GRANT.MODIFIER_NAME
-  is 'ĞŞ¸ÄÈËÃû×Ö';
+  is 'ä¿®æ”¹äººåå­—';
 comment on column AIQRY.SEC_ROLE_FUN_GRANT.MODIFIER_DATE
-  is 'ĞŞ¸ÄÈÕÆÚ';
+  is 'ä¿®æ”¹æ—¥æœŸ';
 
 

@@ -12,22 +12,22 @@ create table AIQRY.SEC_ROLE
 );
 -- Add comments to the table 
 comment on table AIQRY.SEC_ROLE
-  is '½ÇÉ«±í';
--- Add comments to the columns 
+  is 'è§’è‰²è¡¨';
+-- Add comments to the columns
 comment on column AIQRY.SEC_ROLE.ROLE_CODE
-  is '½ÇÉ«CODE';
+  is 'è§’è‰²CODE';
 comment on column AIQRY.SEC_ROLE.ROLE_NAME
-  is '½ÇÉ«Ãû×Ö';
+  is 'è§’è‰²åå­—';
 comment on column AIQRY.SEC_ROLE.ROLE_TYPE
-  is '½ÇÉ«ÀàĞÍ';
+  is 'è§’è‰²ç±»å‹';
 comment on column AIQRY.SEC_ROLE.DESCRIPTION
-  is 'ÃèÊö';
+  is 'æè¿°';
 comment on column AIQRY.SEC_ROLE.STATUS
-  is '0: Ê§Ğ§
-1: Õı³£';
+  is '0: å¤±æ•ˆ
+1: æ­£å¸¸';
 comment on column AIQRY.SEC_ROLE.MODIFIER_ID
-  is '×îºóĞŞ¸ÄÈËÔ±';
+  is 'æœ€åä¿®æ”¹äººå‘˜';
 comment on column AIQRY.SEC_ROLE.MODIFIER_NAME
-  is '×îºóĞŞ¸ÄÈËÃû×Ö';
+  is 'æœ€åä¿®æ”¹äººåå­—';
 comment on column AIQRY.SEC_ROLE.MODIFIER_DATE
-  is '×îºóĞŞ¸ÄÈÕÆÚ';
+  is 'æœ€åä¿®æ”¹æ—¥æœŸ';

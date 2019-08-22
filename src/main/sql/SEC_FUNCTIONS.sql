@@ -17,18 +17,18 @@ create table AIQRY.SEC_FUNCTIONS
 );
 -- Add comments to the table 
 comment on table AIQRY.SEC_FUNCTIONS
-  is '¹¦ÄÜ±í, ×î¶¥ÉÏµÄ¸¸id£¬Îª-1';
--- Add comments to the columns 
+  is 'åŠŸèƒ½è¡¨, æœ€é¡¶ä¸Šçš„çˆ¶idï¼Œä¸º-1';
+-- Add comments to the columns
 comment on column AIQRY.SEC_FUNCTIONS.FUNC_TYPE
-  is '1£º
-2£º
-3£º';
+  is '1ï¼š
+2ï¼š
+3ï¼š';
 comment on column AIQRY.SEC_FUNCTIONS.STATUS
-  is '0: Ê§Ğ§
-1: Õı³£';
+  is '0: å¤±æ•ˆ
+1: æ­£å¸¸';
 comment on column AIQRY.SEC_FUNCTIONS.MODIFIER_ID
-  is 'ĞŞ¸ÄÈËÔ±';
+  is 'ä¿®æ”¹äººå‘˜';
 comment on column AIQRY.SEC_FUNCTIONS.MODIFIER_NAME
-  is 'ĞŞ¸ÄÈËÃû×Ö';
+  is 'ä¿®æ”¹äººåå­—';
 comment on column AIQRY.SEC_FUNCTIONS.MODIFIER_DATE
-  is 'ĞŞ¸ÄÈÕÆÚ';
+  is 'ä¿®æ”¹æ—¥æœŸ';
