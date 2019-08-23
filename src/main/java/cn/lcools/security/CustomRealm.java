@@ -17,7 +17,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Copyright: Copyright (c) 2019 Asiainfo-Linkage
+ * Copyright: Copyright (c) 2019 -Linkage
  *
  * @ClassName: CustomRealm
  * @Description: 该类的功能描述
@@ -71,11 +71,11 @@ public class CustomRealm extends AuthorizingRealm {
         String userCode = (String) authenticationToken.getPrincipal();
 
         //从数据库获取用户信息
-        SecUser userInfo = userService.getUserByUserCode(userCode);
-        if (userInfo == null) {
+        SecUser secUser = userService.getUserByUserCode(userCode);
+        if (secUser == null) {
             return null;
         }
-        SimpleAuthenticationInfo simpleAuthenticationInfo = new SimpleAuthenticationInfo(userInfo, userInfo.getPassword(), getName());
+        SimpleAuthenticationInfo simpleAuthenticationInfo = new SimpleAuthenticationInfo(secUser, secUser.getPassword(), getName());
         simpleAuthenticationInfo.setCredentialsSalt(ByteSource.Util.bytes(userCode+"salt"));
         return simpleAuthenticationInfo;
     }

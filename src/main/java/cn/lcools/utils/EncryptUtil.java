@@ -4,7 +4,7 @@ import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.util.ByteSource;
 
 /**
- * Copyright: Copyright (c) 2019 Asiainfo-Linkage
+ * Copyright: Copyright (c) 2019 -Linkage
  *
  * @ClassName: EncryptUtil
  * @Description: 该类的功能描述

@@ -4,7 +4,7 @@ import cn.lcools.bean.SecUser;
 import org.springframework.stereotype.Service;
 
 /**
- * Copyright: Copyright (c) 2019 Asiainfo-Linkage
+ * Copyright: Copyright (c) 2019 -Linkage
  *
  * @ClassName: IUserInterface
  * @Description: 该类的功能描述

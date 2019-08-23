@@ -8,10 +8,10 @@
         <version>2.1.7.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.asiainfo</groupId>
-    <artifactId>smartweb</artifactId>
+    <groupId>cn.lcools</groupId>
+    <artifactId>springboot-mybatis-thymeleaf-shiro</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>smartweb</name>
+    <name>springboot-mybatis-thymeleaf-shiro</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

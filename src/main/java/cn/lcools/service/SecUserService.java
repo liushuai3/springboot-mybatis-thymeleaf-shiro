@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * Copyright: Copyright (c) 2019 Asiainfo-Linkage
+ * Copyright: Copyright (c) 2019 -Linkage
  *
  * @ClassName: UserService
  * @Description: 该类的功能描述

@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Copyright: Copyright (c) 2019 Asiainfo-Linkage
+ * Copyright: Copyright (c) 2019 -Linkage
  *
  * @ClassName: LoginController
  * @Description: 该类的功能描述
