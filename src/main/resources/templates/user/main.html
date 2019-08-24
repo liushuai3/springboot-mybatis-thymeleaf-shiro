@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<li>菜单列表
+    <table border="1">
+        <tbody>
+        <tr>
+            <th>序号</th>
+            <th>菜单名称</th>
+        </tr>
+        <tr th:each="function,funStat : ${functions}">
+            <th th:text="${funStat.index}">序号</th>
+            <th>
+                <a th:href="${function.funcUrl}+'?funcId='+${function.funcId}" th:text="${function.funcName}">菜单名称</a>
+            </th>
+        </tr>
+        </tbody>
+    </table> </li>
+</body>
+</html>
