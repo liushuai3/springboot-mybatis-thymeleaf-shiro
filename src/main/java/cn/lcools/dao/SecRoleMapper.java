@@ -3,7 +3,9 @@ package cn.lcools.dao;
 import cn.lcools.bean.SecRole;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.InsertProvider;
+import org.apache.ibatis.annotations.Mapper;
 
+@Mapper
 public interface SecRoleMapper {
     @Insert({
         "insert into SEC_ROLE (ROLE_CODE, ROLE_NAME, ",

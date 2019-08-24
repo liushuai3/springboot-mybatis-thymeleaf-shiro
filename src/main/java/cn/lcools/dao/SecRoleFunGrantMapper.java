@@ -4,6 +4,7 @@ import cn.lcools.bean.SecRoleFunGrant;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.InsertProvider;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
@@ -11,6 +12,9 @@ import org.apache.ibatis.annotations.Update;
 import org.apache.ibatis.annotations.UpdateProvider;
 import org.apache.ibatis.type.JdbcType;
 
+import java.util.Set;
+
+@Mapper
 public interface SecRoleFunGrantMapper {
     @Delete({
         "delete from SEC_ROLE_FUN_GRANT",
@@ -60,4 +64,17 @@ public interface SecRoleFunGrantMapper {
         "where ROLE_GRANT_ID = #{roleGrantId,jdbcType=DECIMAL}"
     })
     int updateByPrimaryKey(SecRoleFunGrant record);
+
+    @Select({
+            "select",
+            "t.FUNC_ID",
+            "from SEC_ROLE_FUN_GRANT t where t.ROLE_CODE in(",
+            "select a.ROLE_CODE from SEC_AUTHORIZE a",
+            "where a.USER_ID = #{userId,jdbcType=DECIMAL}",
+            ")"
+    })
+    @Results({
+            @Result(column="FUNC_ID", property="funcId", jdbcType=JdbcType.VARCHAR),
+    })
+    Set<String> selectFuncIdsByUserId(Long userId);
 }
