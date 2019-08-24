@@ -14,7 +14,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -37,7 +36,6 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping(value = "/login")
 public class LoginController {
     @PostMapping
-    @ResponseBody
     public String login(SecUser userInfo){
         Subject subject = SecurityUtils.getSubject();
         UsernamePasswordToken token = new UsernamePasswordToken(userInfo.getUsername(), userInfo.getPassword());
@@ -57,15 +55,15 @@ public class LoginController {
             return "用户名或密码不正确！";
         }
         if(subject.isAuthenticated()){
-            return "登录成功";
+            return "redirect:/user";
         }else {
             token.clear();
-            return "登录失败";
+            return "redirect:/login";
         }
     }
 
     @GetMapping
-    public String form(HttpServletRequest request,Model model) {
+    public String login(HttpServletRequest request,Model model) {
         SecUser userInfo = new SecUser();
             model.addAttribute("secUser", userInfo);
             return "/user/login";

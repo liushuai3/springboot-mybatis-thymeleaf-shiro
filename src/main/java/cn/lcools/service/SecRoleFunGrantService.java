@@ -1,9 +1,11 @@
 package cn.lcools.service;
 
+import cn.lcools.bean.SecFunctions;
 import cn.lcools.dao.SecRoleFunGrantMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -28,5 +30,10 @@ public class SecRoleFunGrantService implements ISecRoleFunGrantInterface{
     @Override
     public Set<String> selectFuncIdsByUserId(Long userId) {
         return secRoleFunGrantMapper.selectFuncIdsByUserId(userId);
+    }
+
+    @Override
+    public List<SecFunctions> selectFuncsByUserId(Long userId) {
+        return secRoleFunGrantMapper.selectFuncsByUserId(userId);
     }
 }

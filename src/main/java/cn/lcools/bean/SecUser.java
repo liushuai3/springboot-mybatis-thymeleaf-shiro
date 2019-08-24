@@ -163,4 +163,26 @@ public class SecUser implements Serializable {
     public void setModifierDate(Date modifierDate) {
         this.modifierDate = modifierDate;
     }
+
+    @Override
+    public String toString() {
+        return "SecUser{" +
+                "userId=" + userId +
+                ", userCode='" + userCode + '\'' +
+                ", plaintextPassword='" + plaintextPassword + '\'' +
+                ", password='" + password + '\'' +
+                ", username='" + username + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", description='" + description + '\'' +
+                ", isAdmin=" + isAdmin +
+                ", status=" + status +
+                ", createDate=" + createDate +
+                ", creatorId=" + creatorId +
+                ", creatorName='" + creatorName + '\'' +
+                ", modifierId=" + modifierId +
+                ", modifierName='" + modifierName + '\'' +
+                ", modifierDate=" + modifierDate +
+                '}';
+    }
 }

@@ -1,12 +1,20 @@
 package cn.lcools.controller;
 
+import cn.lcools.bean.SecAuthorize;
+import cn.lcools.bean.SecFunctions;
 import cn.lcools.bean.SecUser;
+import cn.lcools.service.ISecAuthorizeInterface;
+import cn.lcools.service.ISecRoleFunGrantInterface;
 import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.subject.Subject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * Copyright: Copyright (c) 2019 -Linkage
@@ -26,35 +34,47 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping(value = "/")
 public class UserController {
 
-    @ResponseBody
+    @Autowired
+    ISecRoleFunGrantInterface roleFunGrantService;
+    @Autowired
+    ISecAuthorizeInterface authorizeService;
+
+    @GetMapping
+    public String getIndex() {
+        return "forward:/login";
+    }
+
     @GetMapping(value = "/user")
-    public String getUserInfo(){
-        Subject subject = SecurityUtils.getSubject();
-        boolean ok = subject.isAuthenticated();
-        boolean ok2 = subject.hasRole("admin");
-        boolean ok3 = subject.isPermitted("user");
+    public String getUserInfo(Model model){
         Object object = SecurityUtils.getSubject().getPrincipal();
         if (object instanceof SecUser) {
             SecUser userInfo = (SecUser)object;
-            return userInfo.getUsername()+":"+ok+":"+ok2+":"+ok3;
+            List<SecFunctions> functions = roleFunGrantService.selectFuncsByUserId(userInfo.getUserId());
+            model.addAttribute("functions",functions);
+            return "/user/main";
         }else {
-            return object+":"+ok+":"+ok2+":"+ok3;
+            return "/user/main";
         }
     }
-
+    @GetMapping(value = "/getUser")
     @ResponseBody
-    @GetMapping(value = "/index")
-    public String getUserInfo1() {
-        Subject subject = SecurityUtils.getSubject();
-        boolean ok = subject.isAuthenticated();
-        boolean ok2 = subject.hasRole("admin");
-        boolean ok3 = subject.isPermitted("user");
+    public String getUser(){
         Object object = SecurityUtils.getSubject().getPrincipal();
         if (object instanceof SecUser) {
             SecUser userInfo = (SecUser) object;
-            return "tt:"+userInfo.getUsername() + ":" + ok + ":" + ok2 + ":" + ok3;
-        } else {
-            return "tt:" + object + ":" + ok + ":" + ok2 + ":" + ok3;
+            return userInfo.toString();
         }
+        return "";
+    }
+    @GetMapping(value = "/getRole")
+    @ResponseBody
+    public String getRole(){
+        Object object = SecurityUtils.getSubject().getPrincipal();
+        if (object instanceof SecUser) {
+            SecUser userInfo = (SecUser) object;
+            List<SecAuthorize> authorizes = authorizeService.selectByUserId(userInfo.getUserId());
+            return authorizes.get(0).toString();
+        }
+        return "";
     }
 }

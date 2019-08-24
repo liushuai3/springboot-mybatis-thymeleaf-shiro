@@ -63,4 +63,16 @@ public class SecAuthorize implements Serializable {
     public void setModifierDate(Date modifierDate) {
         this.modifierDate = modifierDate;
     }
+
+    @Override
+    public String toString() {
+        return "SecAuthorize{" +
+                "authorizeId=" + authorizeId +
+                ", userId=" + userId +
+                ", roleCode='" + roleCode + '\'' +
+                ", modifierId=" + modifierId +
+                ", modifierName='" + modifierName + '\'' +
+                ", modifierDate=" + modifierDate +
+                '}';
+    }
 }

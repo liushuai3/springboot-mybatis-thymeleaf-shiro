@@ -1,7 +1,9 @@
 package cn.lcools.service;
 
+import cn.lcools.bean.SecFunctions;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -21,4 +23,5 @@ import java.util.Set;
 @Service
 public interface ISecRoleFunGrantInterface {
     Set<String> selectFuncIdsByUserId(Long userId);
+    List<SecFunctions> selectFuncsByUserId(Long userId);
 }
